@@ -1,0 +1,28 @@
+---
+:turn: 7
+:tablet:
+- K
+- R
+- "-"
+- "-"
+- "-"
+- "-"
+- "-"
+- "-"
+- R
+- "-"
+- K
+:incorrect_letters: []
+:secret_word: KRASNOYARSK
+:secret_word_arr:
+- K
+- R
+- A
+- S
+- N
+- O
+- Y
+- A
+- R
+- S
+- K

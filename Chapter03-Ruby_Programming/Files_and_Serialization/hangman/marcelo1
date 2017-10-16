@@ -1,0 +1,26 @@
+---
+:turn: 5
+:tablet:
+- "-"
+- "-"
+- "-"
+- O
+- "-"
+- "-"
+- I
+- "-"
+- "-"
+:incorrect_letters:
+- A
+- E
+:secret_word: SYNOPTICS
+:secret_word_arr:
+- S
+- Y
+- N
+- O
+- P
+- T
+- I
+- C
+- S
