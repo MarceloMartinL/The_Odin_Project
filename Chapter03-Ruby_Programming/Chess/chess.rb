@@ -6,6 +6,7 @@ class Board
 		@player1 = player1
 		@player2 = player2
 		@current_player = @player1
+		@opponent_player = @player2
 	end
 
  # Creates a Hash with 64 nodes using the chess coordinates (e.g. b1) as keys for each node.
@@ -233,22 +234,23 @@ class Board
 				if check_validation == true
 					@board[plays] = @board[piece]
 					@board[piece] = Node.new
-					puts "AKA #{piece} to #{plays}"
-					puts "#{all_pieces.size} to #{available_plays.size}"
-					show_board
+					#puts "AKA #{piece} to #{plays}"
+					#puts "#{all_pieces.size} to #{available_plays.size}"
+			
 					
-					puts "SOY INVISIBLEEEE"
+					#puts "SOY INVISIBLEEEE"
 					check_condition
-					puts "REGRESE DE REVISAR EL CHECK"
+					#puts "REGRESE DE REVISAR EL CHECK"
 					if @current_player.in_check == false
 						@check_mate_on = false
 						@board = YAML.load(temp_board)
-						puts "ACA TERMINA LA WEA PORQUE NO ESTA EN CHECK"
+						#puts "ACA TERMINA LA WEA PORQUE NO ESTA EN CHECK"
 						return false
 					end
 					@board = YAML.load(temp_board)
 				end
-				puts "ACA HAY UN LOOP PQ EL WEON ESTA EN CHECKKKK!!!!"
+				#puts "ACA HAY UN LOOP PQ EL WEON ESTA EN CHECKKKK!!!!"
+				#puts "OH BIEN EL MOVIMIENTO AWEONAO ES ILEGAL"
 
 			end
 		end
@@ -276,8 +278,8 @@ class Board
 			end
 		end
 
-		p king_position
-		p enemy_position
+		#p king_position
+		#p enemy_position
 		enemy_position.each do |value|
 			@check_on_curse = true
 			check_try = [value,king_position]
@@ -338,7 +340,7 @@ class Board
 
 	def finish_game
 		if @check_mate_on == true
-			puts "CHECKMATE !!! #{@current_player.name} lose the game."
+			puts "CHECKMATE !!!\n#{@opponent_player.name} WON the game !!!"
 			exit
 		else
 			puts "\nThe King is DEAD !!!"
@@ -378,12 +380,14 @@ class Board
 	def change_player
 		if @current_player == @player1
 			@current_player = @player2
+			@opponent_player = @player1
 			show_board
 			check_mate
 			check_condition
 			input_validation
 		else
 			@current_player = @player1
+			@opponent_player = @player2
 			show_board
 			check_mate
 			check_condition
