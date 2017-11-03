@@ -1,3 +1,5 @@
+require 'yaml'
+
 class Board
 
 	def initialize(player1, player2)
@@ -108,12 +110,18 @@ class Board
 				validation = true
 			end
 		end
-		input_convertion(@player_play)	
+		play_flow(@player_play)
 	end
 
 
 	def input_convertion(input)
 		@letter_convertion = {"a" => 1, "b" => 2, "c" => 3, "d" => 4, "e" => 5, "f" => 6, "g" => 7, "h" => 8}
+		@opponent_piece = @board[input[1]].name
+		@first_coord_convertion = input[0]
+		@second_coord_convertion = input[1]
+		@start_node = @board[input[0]]
+		@final_node = @board[input[1]]
+		@piece_name = @board[input[0]].name
 		final_movement = []
 		x1 = @letter_convertion[input[0][0]]
 		y1 = input[0][1].to_i
@@ -123,13 +131,10 @@ class Board
 		@final_coord = [x2,y2]
 		final_movement << (x2 - x1)
 		final_movement << (y2 - y1)
-		
-		movement_validation(final_movement)	
+		final_movement
 	end
 
 	def movement_validation(player_mov)
-		@piece_name = @board[@player_play[0]].name
-		@opponent_piece = @board[@player_play[1]].name
 		correct_mov = []
 		piece_movs = {
 			"king"   => [[0,1], [1,1], [1,0], [1,-1], [0,-1], [-1,-1], [-1,0], [-1,1]],
@@ -137,17 +142,17 @@ class Board
 			"rook"   => [[0,1], [1,0], [0,-1], [-1,0]],
 			"bishop" => [[1,1], [1,-1], [-1,-1], [-1,1]],
 			"queen"  => [[0,1], [1,1], [1,0], [1,-1], [0,-1], [-1,-1], [-1,0], [-1,1]],
-			"pawn"   =>	[[0,1], [0,-1], [1,1], [-1,1], [0,2], [0,-2]]
+			"pawn"   =>	[[0,1], [0,-1], [1,1], [-1,1], [1,-1], [-1,-1], [0,2], [0,-2]]
 		}
 		
 		if ["king", "knight"].include?(@piece_name)
 			piece_movs[@piece_name].each do |mov|
-				if mov == player_mov && (@board[@player_play[1]].color != @current_player.color || @board[@player_play[1]].color == nil)
-					node_change
+				if mov == player_mov && (@final_node.color != @current_player.color || @final_node.color == nil)
+					return true
+				elsif (mov == player_mov && @check_on_curse == true) && (@final_node.color == @current_player.color && @final_node.name == "king") 
+					return true				
 				end
 			end
-			puts "Your piece can't move there, try again!"
-			input_validation
 		elsif ["rook", "bishop", "queen"].include?(@piece_name)
 			piece_movs[@piece_name].each do |mov|
 				(1..7).each do |num|
@@ -157,30 +162,27 @@ class Board
 						correct_mov = mov
 						#If the way is clear then change the nodes.
 						if cleared_way?(correct_mov) == true
-							node_change
-						else
-							puts "Error!. Your piece cannot leap over other pieces, try again!"
-							input_validation
+							return true
 						end
 					end
 				end
 			end
-			puts "Your piece can't move there, try again!"
-			input_validation
 		elsif @piece_name == "pawn"
-			if piece_movs["pawn"][0..1].include?(player_mov) && @board[@player_play[1]].color == nil 
-				node_change
-			elsif piece_movs["pawn"][2..3].include?(player_mov) && (@board[@player_play[1]].color != @current_player.color && @board[@player_play[1]].color != nil)
-				node_change
-			elsif piece_movs["pawn"][4] == player_mov && (@board[@player_play[0]].color == "white" && @player_play[0][1] == "2")
-				node_change
-			elsif piece_movs["pawn"][5] == player_mov && (@board[@player_play[0]].color == "black" && @player_play[0][1] == "7")
-				node_change
-			else
-				puts "Your piece can't move there, try again!"
-				input_validation		
+			if piece_movs["pawn"][0].include?(player_mov) && (@final_node.color == nil && @start_node.color == "white")
+				return true
+			elsif piece_movs["pawn"][1].include?(player_mov) && (@final_node.color == nil && @start_node.color == "black")
+				return true		
+			elsif (piece_movs["pawn"][2..3].include?(player_mov) && @start_node.color == "white") && (@final_node.color != @current_player.color && @final_node.color != nil)
+				return true	
+			elsif (piece_movs["pawn"][4..5].include?(player_mov) && @start_node.color == "black") && (@final_node.color != @current_player.color && @final_node.color != nil)
+				return true
+			elsif (piece_movs["pawn"][6] == player_mov && @final_node.color == nil) && (@start_node.color == "white" && @first_coord_convertion[1] == "2")
+				return true
+			elsif (piece_movs["pawn"][7] == player_mov && @final_node.color == nil) && (@start_node.color == "black" && @first_coord_convertion[1] == "7")
+				return true	
 			end
 		end
+		return false
 	end
 
  # Checks if the way to the endpoint is clear.
@@ -197,19 +199,99 @@ class Board
 
 			@mov_translation = x_new + y_new
 	
-			if @board[@mov_translation].name != nil && @mov_translation != @player_play[1]
+			if @board[@mov_translation].name != nil && @mov_translation != @second_coord_convertion
 				return false
-			elsif @board[@mov_translation].color != @current_player.color && @mov_translation == @player_play[1]
+			elsif @board[@mov_translation].color != @current_player.color && @mov_translation == @second_coord_convertion
 				return true
+			elsif @board[@mov_translation].color == @current_player.color && (@board[@mov_translation].name == "king" && @check_on_curse == true)
+				return true	
 			end		
 		end
 	end
 
+	#CHEQUEAR ANTES DE CAMBIAR DE TURNO
+	def check_mate
+		@check_mate_on = false
+		all_pieces = []
+		available_plays = []
+		temp_board = YAML.dump(@board)
+		@board.each do |key, piece|
+			#DAR VUELTA ESTA WEA PARA QUE REVISE AL JUGAR CUANDO YA SE CAMBIO EL TURNO (a uno mismo)
+			if piece.color == @current_player.color
+				all_pieces << key
+			elsif piece.color == nil || piece.color != @current_player.color
+				available_plays << key		
+			end
+		end
+
+		all_pieces.each do |piece|
+			available_plays.each do |plays|
+				@check_mate_on = true
+				check_try = [piece, plays]
+				check_validation = movement_validation(input_convertion(check_try))
+
+				if check_validation == true
+					@board[plays] = @board[piece]
+					@board[piece] = Node.new
+					puts "AKA #{piece} to #{plays}"
+					puts "#{all_pieces.size} to #{available_plays.size}"
+					show_board
+					
+					puts "SOY INVISIBLEEEE"
+					check_condition
+					puts "REGRESE DE REVISAR EL CHECK"
+					if @current_player.in_check == false
+						@check_mate_on = false
+						@board = YAML.load(temp_board)
+						puts "ACA TERMINA LA WEA PORQUE NO ESTA EN CHECK"
+						return false
+					end
+					@board = YAML.load(temp_board)
+				end
+				puts "ACA HAY UN LOOP PQ EL WEON ESTA EN CHECKKKK!!!!"
+
+			end
+		end
+		finish_game
+	end
+
+	def play_flow(play)
+		if movement_validation(input_convertion(play)) == true
+			node_change(play)
+		else
+			puts "\nError! Your piece cannot move there, try again!"
+			input_validation
+		end
+	end
+
 	def check_condition
+		king_position = ""
+		@check_on_curse = false
 		enemy_position = []
 		@board.each do |key, piece|
-
+			if piece.name == "king" && piece.color == @current_player.color
+				king_position = key
+			elsif piece.color != @current_player.color && piece.color != nil
+				enemy_position << key				
+			end
 		end
+
+		p king_position
+		p enemy_position
+		enemy_position.each do |value|
+			@check_on_curse = true
+			check_try = [value,king_position]
+			check_validation = movement_validation(input_convertion(check_try))
+			puts "#{check_try} : #{check_validation} : #{@piece_name}"
+			if check_validation == true
+				@current_player.in_check = true
+				puts "player in check!!!!"
+				break
+			else
+				@current_player.in_check = false
+			end
+		end
+		@check_on_curse = false
 	end
 
 	def promotion_menu
@@ -248,20 +330,36 @@ class Board
 	end
 
 	def win_condition
-		if @opponent_piece == "king"
+		if @eliminated_piece.name == "king"
 			show_board
 			finish_game
 		end
 	end
 
 	def finish_game
-		puts "The King is DEAD !!!"
-		puts "#{@current_player.name} WON THE GAME !!!"
-		exit
+		if @check_mate_on == true
+			puts "CHECKMATE !!! #{@current_player.name} lose the game."
+			exit
+		else
+			puts "\nThe King is DEAD !!!"
+			puts "#{@current_player.name} WON THE GAME !!!"
+			exit
+		end
+	end
+
+	def check_state
+		@board[@player_play[0]] = @final_node
+		@board[@player_play[1]] = @start_node
+		puts "\nYou are in CHECK"
+		puts "You MUST do a movement to get out of CHECK"
+		input_validation
 	end
 
 	def game_conditions
-		if @piece_name == "pawn"
+		check_condition
+		if @current_player.in_check == true
+			check_state
+		elsif @piece_name == "pawn"
 			win_condition 
 			promotion_check
 		else
@@ -270,9 +368,10 @@ class Board
 		end
 	end
 
-	def node_change
-		@board[@player_play[1]] = @board[@player_play[0]]
-		@board[@player_play[0]] = Node.new
+	def node_change(transition)
+		@eliminated_piece = @board[@player_play[1]]
+		@board[transition[1]] = @board[@player_play[0]]
+		@board[transition[0]] = Node.new
 		game_conditions
 	end
 
@@ -280,10 +379,14 @@ class Board
 		if @current_player == @player1
 			@current_player = @player2
 			show_board
+			check_mate
+			check_condition
 			input_validation
 		else
 			@current_player = @player1
 			show_board
+			check_mate
+			check_condition
 			input_validation
 		end
 	end
@@ -331,11 +434,12 @@ class Node
 end
 
 class Player
-	attr_accessor :name, :color
+	attr_accessor :name, :color, :in_check
 
-	def initialize(name, color)
+	def initialize(name, color, in_check=false)
 		@name = name
 		@color = color
+		@in_check = in_check
 	end
 end
 
