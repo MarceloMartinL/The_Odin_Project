@@ -1,0 +1,1157 @@
+---
+- a1: !ruby/object:Node
+    view: " "
+    name: rook
+    color: white
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  b1: !ruby/object:Node
+    view: " "
+    name: knight
+    color: white
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  c1: !ruby/object:Node
+    view: " "
+    name: bishop
+    color: white
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  d1: !ruby/object:Node
+    view: " "
+    name: queen
+    color: white
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  e1: !ruby/object:Node
+    view: " "
+    name: king
+    color: white
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  f1: !ruby/object:Node
+    view: " "
+    name: bishop
+    color: white
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  g1: !ruby/object:Node
+    view: " "
+    name: knight
+    color: white
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  h1: !ruby/object:Node
+    view: " "
+    name: rook
+    color: white
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  a2: !ruby/object:Node
+    view: " "
+    name: pawn
+    color: white
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  b2: !ruby/object:Node
+    view: " "
+    name: pawn
+    color: white
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  c2: !ruby/object:Node
+    view: " "
+    name: pawn
+    color: white
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  d2: !ruby/object:Node
+    view: " "
+    name: pawn
+    color: white
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  e2: !ruby/object:Node
+    view: " "
+    name: 
+    color: 
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  f2: !ruby/object:Node
+    view: " "
+    name: 
+    color: 
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  g2: !ruby/object:Node
+    view: " "
+    name: pawn
+    color: white
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  h2: !ruby/object:Node
+    view: " "
+    name: pawn
+    color: white
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  a3: !ruby/object:Node
+    view: " "
+    name: 
+    color: 
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  b3: !ruby/object:Node
+    view: " "
+    name: 
+    color: 
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  c3: !ruby/object:Node
+    view: " "
+    name: 
+    color: 
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  d3: !ruby/object:Node
+    view: " "
+    name: 
+    color: 
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  e3: !ruby/object:Node
+    view: " "
+    name: 
+    color: 
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  f3: !ruby/object:Node
+    view: " "
+    name: 
+    color: 
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  g3: !ruby/object:Node
+    view: " "
+    name: 
+    color: 
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  h3: !ruby/object:Node
+    view: " "
+    name: 
+    color: 
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  a4: !ruby/object:Node
+    view: " "
+    name: 
+    color: 
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  b4: !ruby/object:Node
+    view: " "
+    name: 
+    color: 
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  c4: !ruby/object:Node
+    view: " "
+    name: 
+    color: 
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  d4: !ruby/object:Node
+    view: " "
+    name: 
+    color: 
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  e4: !ruby/object:Node
+    view: " "
+    name: pawn
+    color: white
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  f4: !ruby/object:Node
+    view: " "
+    name: pawn
+    color: white
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  g4: !ruby/object:Node
+    view: " "
+    name: 
+    color: 
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  h4: !ruby/object:Node
+    view: " "
+    name: 
+    color: 
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  a5: !ruby/object:Node
+    view: " "
+    name: 
+    color: 
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  b5: !ruby/object:Node
+    view: " "
+    name: 
+    color: 
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  c5: !ruby/object:Node
+    view: " "
+    name: 
+    color: 
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  d5: !ruby/object:Node
+    view: " "
+    name: 
+    color: 
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  e5: !ruby/object:Node
+    view: " "
+    name: pawn
+    color: black
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  f5: !ruby/object:Node
+    view: " "
+    name: 
+    color: 
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  g5: !ruby/object:Node
+    view: " "
+    name: 
+    color: 
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  h5: !ruby/object:Node
+    view: " "
+    name: 
+    color: 
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  a6: !ruby/object:Node
+    view: " "
+    name: 
+    color: 
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  b6: !ruby/object:Node
+    view: " "
+    name: 
+    color: 
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  c6: !ruby/object:Node
+    view: " "
+    name: 
+    color: 
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  d6: !ruby/object:Node
+    view: " "
+    name: 
+    color: 
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  e6: !ruby/object:Node
+    view: " "
+    name: 
+    color: 
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  f6: !ruby/object:Node
+    view: " "
+    name: 
+    color: 
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  g6: !ruby/object:Node
+    view: " "
+    name: 
+    color: 
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  h6: !ruby/object:Node
+    view: " "
+    name: 
+    color: 
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  a7: !ruby/object:Node
+    view: " "
+    name: pawn
+    color: black
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  b7: !ruby/object:Node
+    view: " "
+    name: pawn
+    color: black
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  c7: !ruby/object:Node
+    view: " "
+    name: pawn
+    color: black
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  d7: !ruby/object:Node
+    view: " "
+    name: pawn
+    color: black
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  e7: !ruby/object:Node
+    view: " "
+    name: 
+    color: 
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  f7: !ruby/object:Node
+    view: " "
+    name: pawn
+    color: black
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  g7: !ruby/object:Node
+    view: " "
+    name: pawn
+    color: black
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  h7: !ruby/object:Node
+    view: " "
+    name: pawn
+    color: black
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  a8: !ruby/object:Node
+    view: " "
+    name: rook
+    color: black
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  b8: !ruby/object:Node
+    view: " "
+    name: knight
+    color: black
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  c8: !ruby/object:Node
+    view: " "
+    name: bishop
+    color: black
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  d8: !ruby/object:Node
+    view: " "
+    name: queen
+    color: black
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  e8: !ruby/object:Node
+    view: " "
+    name: king
+    color: black
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  f8: !ruby/object:Node
+    view: " "
+    name: bishop
+    color: black
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  g8: !ruby/object:Node
+    view: " "
+    name: knight
+    color: black
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+  h8: !ruby/object:Node
+    view: " "
+    name: rook
+    color: black
+    white_symbols:
+      king: "♚"
+      queen: "♛"
+      rook: "♜"
+      bishop: "♝"
+      knight: "♞"
+      pawn: "♟"
+    black_symbols:
+      king: "♔"
+      queen: "♕"
+      rook: "♖"
+      bishop: "♗"
+      knight: "♘"
+      pawn: "♙"
+- !ruby/object:Player
+  name: Player2
+  color: black
+  in_check: false
