@@ -1,0 +1,29 @@
+<html>
+<head>
+	<style>
+	form {display:inline;
+				vertical-align: middle;}
+	</style>
+</head>
+<body>
+	<p>
+		<%= game_display %>
+	</p>
+	<p>
+		<%= status %>
+	</p>
+	<div class='game_butttons'>
+	<form method='post'>
+		<input type='text' name='letter' maxlength='1'> <br><br>
+		<input type='submit' value='Guess!'>
+	</form>
+	<form action='/restart' method='post'>
+		<input type='submit' value='Restart'>
+	</form>
+	</div>
+	<p>
+		<%= message %>
+	</p>
+
+</body>
+</html>

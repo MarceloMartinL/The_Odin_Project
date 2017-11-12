@@ -4,7 +4,6 @@ require 'sinatra/reloader'
 $number = rand(101)
 
 def check_guess(guess_number)
-	
 	if guess_number > ($number+5)
 		"Way too high!"
 	elsif guess_number < ($number-5)
