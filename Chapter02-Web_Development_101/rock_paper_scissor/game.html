@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<script>
+		let humanWins = 0
+		let computerWins = 0
+
+		function computerPlay() {
+			let number = Math.floor(Math.random() * 3);
+			let result = ""
+
+			if (number === 0) {
+				return result = "rock";
+			} else if (number === 1) {
+				return result = "paper";
+			} else if (number === 2) {
+				return result = "scissor";
+			}
+		}
+
+		function playRound(playerSelection, computerSelection) {
+			let humanPlay = playerSelection.toLowerCase()
+
+			if (humanPlay === computerSelection) {
+				return result = humanPlay + " vs " + computerSelection + ". It's a DRAW!"
+			} else if (humanPlay === "rock" && computerSelection === "scissor" ||
+				       humanPlay === "paper" && computerSelection === "rock" ||
+				       humanPlay === "scissor" && computerSelection === "paper") {
+				humanWins += 1
+				return result = humanPlay + " vs " + computerSelection + ". Player 1 WIN!"
+			} else {
+				computerWins += 1
+				return result = humanPlay + " vs " + computerSelection + ". The computer WIN!"
+			}
+		}
+
+		function game() {
+			for (i = 1; i < 6; i++) {
+				console.log(playRound(prompt("Enter your choice", "rock"), computerPlay()));
+			}
+			return gameResult();
+		}
+
+		function gameResult() {
+			if (humanWins > computerWins) {
+				return result = `Player 1: ${humanWins} vs Computer: ${computerWins}. Player 1 WON!!!`
+			} else if (humanWins < computerWins) {
+				return result = `Player 1: ${humanWins} vs Computer: ${computerWins}. Computer WON!!!`
+			} else {
+				return result = `Player 1: ${humanWins} vs Computer: ${computerWins}. DRAW! No one wins...`
+			}
+		}
+
+		console.log(game())
+
+	</script>
+</body>
+</html>

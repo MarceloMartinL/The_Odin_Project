@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Function scope example</title>
+</head>
+<body>
+  
+  <script>
+    function add7(num) {
+      console.log(num+7);
+    }
+
+    function multiply(a, b) {
+      result = a*b;
+      console.log(result);
+    }
+
+    function capitalize(string) {
+      convertion = string.toLowerCase();
+      result = convertion.charAt(0).toUpperCase().concat(convertion.slice(1));
+      console.log(result);
+    }
+
+    function lastLetter(string) {
+      stringLength = string.length;
+      result = string.slice(stringLength - 1);
+      console.log(result);
+    }
+  </script>
+</body>
+</html>
