@@ -1,0 +1,15 @@
+<h1><%= current_user.name.capitalize %> Notifications</h1>
+<h2>Friend Requests</h2>
+<ul>
+	<% @incoming.each do |request| %>
+		<li><%= request.user.name.capitalize %></li>
+		<%= link_to "Confirm", friend_request_path(request), method: :patch %>
+		<%= link_to "Eliminate", friend_request_path(request), method: :delete %>
+	<% end %>
+</ul>
+<h2>Pending Friends</h2>
+<ul>
+	<% @outgoing.each do |request| %>
+		<li><%= request.friend.name.capitalize %></li>
+	<% end %>
+</ul>

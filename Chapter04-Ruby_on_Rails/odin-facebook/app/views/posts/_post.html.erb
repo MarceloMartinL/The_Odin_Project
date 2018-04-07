@@ -1,0 +1,28 @@
+<li id="post-<%= post.id %>">
+	<%= link_to gravatar_for(post.user, size: 50), post.user %>
+	<span class="user"><%= link_to post.user.name.capitalize, post.user %></span>
+	<span class="content"><%= post.content %></span>
+	<span class="timestamp">
+		Posted <%= time_ago_in_words(post.created_at) %> ago.</span>
+	<% if current_user.liked_posts.include?(post) %>
+		<%= link_to "Unlike", like_path(post.likes.where(user_id: current_user.id).take), method: :delete %>
+	<% else %>
+		<%= link_to "Like", likes_path(:user_id => current_user.id, :post_id => post.id), method: :post %>
+	<% end %>
+
+	<% if current_user == post.user %>
+		<%= link_to "delete", post, method: :delete, data: { confirm: "You sure?" } %>
+	<% end %>
+	<div class="comment_form">
+		<%= render 'shared/comment_form', post: post %>
+	</div>
+	<div class="comment_list">
+		<% if post.comments.size >= 1 %>
+			<ul>
+				<% post.comments.each do |comment| %>
+					<li><%= link_to comment.user.name.capitalize, comment.user %>: <%= comment.body %></li>
+				<% end %>
+			</ul>
+		<% end %>
+	</div>
+</li>

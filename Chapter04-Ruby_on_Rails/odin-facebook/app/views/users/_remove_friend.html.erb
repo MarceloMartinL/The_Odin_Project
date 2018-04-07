@@ -1,0 +1,4 @@
+<%= form_tag({controller: "friends", action: "destroy"}, method: "get") do %>
+	<%= hidden_field_tag :id, @user.id %>
+	<%=  submit_tag "Remove Friend", class: "btn" %>
+<% end %>
