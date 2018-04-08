@@ -6,7 +6,7 @@ Implement a caesar cipher that takes in a string and the shift factor and then o
 
 ```
 > caesar_cipher("What a string!", 5)
-=> "Bmfy f xywnsl!"
+  => "Bmfy f xywnsl!"
 ```
 
 ## Stock Picker
@@ -15,7 +15,7 @@ Implement a method #stock_picker that takes in an array of stock prices, one for
 
 ```
 > stock_picker([17,3,6,9,15,8,6,1,10])
-=> [1,4]  # for a profit of $15 - $3 == $12
+  => [1,4]  # for a profit of $15 - $3 == $12
 ```
 
 ## Substrings
@@ -24,14 +24,14 @@ Implement a method #substrings that takes a word as the first argument and then 
 
 ```
 > dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
-=> ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
+  => ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
 
 > substrings("below", dictionary)
-=> { "below" => 1, "low" => 1 }
+  => { "below" => 1, "low" => 1 }
 ```
 Next, make sure your method can handle multiple words:
 
 ```
 > substrings("Howdy partner, sit down! How's it going?", dictionary)
-=> { "down" => 1, "how" => 2, "howdy" => 1,"go" => 1, "going" => 1, "it" => 2, "i" => 3, "own" => 1,"part" => 1,"partner" => 1,"sit" => 1 }
+  => { "down" => 1, "how" => 2, "howdy" => 1,"go" => 1, "going" => 1, "it" => 2, "i" => 3, "own" => 1,"part" => 1,"partner" => 1,"sit" => 1 }
 ```
