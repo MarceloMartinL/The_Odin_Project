@@ -4,29 +4,51 @@
   <meta charset="utf-8">
   <title>Function scope example</title>
 </head>
+
 <body>
-  
-  <script>
-    function add7(num) {
-      console.log(num+7);
-    }
+  <h1>
+    THE TITLE OF YOUR WEBPAGE
+  </h1>
+  <div id="container">
+    <div class="content">
+      This is the glorious text-content!
+    </div>
+  </div>
 
-    function multiply(a, b) {
-      result = a*b;
-      console.log(result);
-    }
-
-    function capitalize(string) {
-      convertion = string.toLowerCase();
-      result = convertion.charAt(0).toUpperCase().concat(convertion.slice(1));
-      console.log(result);
-    }
-
-    function lastLetter(string) {
-      stringLength = string.length;
-      result = string.slice(stringLength - 1);
-      console.log(result);
-    }
-  </script>
+  <button id="btn">Click Me</button>
 </body>
+<script>
+    const container = document.querySelector('#container');
+    const content = document.createElement('p');
+
+    content.classList.add('content');
+    content.textContent = "Hey I'm red!";
+    content.setAttribute('style', 'color: red')
+
+    container.appendChild(content);
+
+    let h3 = document.createElement('h3');
+    h3.textContent = "I'm a blue h3!";
+    h3.setAttribute('style', 'color: blue');
+
+    container.appendChild(h3);
+
+    let div = document.createElement('div');
+    div.setAttribute('style', 'border: black; background: pink')
+
+    let h1 = document.createElement('h1');
+    h1.textContent = "I'm in a div!";
+    div.appendChild(h1);
+
+    let p = document.createElement('p');
+    p.textContent = "ME TOO!";
+    div.appendChild(p);
+    container.appendChild(div);
+
+    var btn = document.querySelector('#btn');
+    btn.addEventListener('click', function(e){
+    e.target.style.background = 'blue'
+    })
+  </script>
 </html>
+
