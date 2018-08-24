@@ -1,0 +1,121 @@
+@mixin grid-column($unit) {
+	flex-basis: ($unit/12) * 100%;
+	max-width: ($unit/12) * 100%;
+	padding: 8px;
+}
+
+body, h1, h2, h3, h4, h5, h6, figure {
+	margin: 0;
+}
+
+.container {
+	display: block;
+	width: 100%;
+	max-width: 1170px;;
+	margin: 0 auto;
+
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.col-1 {
+	@include grid-column(1)
+}
+
+.col-2 {
+	@include grid-column(2)
+}
+
+.col-3 {
+	@include grid-column(3)
+}
+
+.col-4 {
+	@include grid-column(4)
+}
+
+.col-5 {
+	@include grid-column(5)
+}
+
+.col-6 {
+	@include grid-column(6)
+}
+
+.col-7 {
+	@include grid-column(7)
+}
+
+.col-8 {
+	@include grid-column(8)
+}
+
+.col-9 {
+	@include grid-column(9)
+}
+
+.col-10 {
+	@include grid-column(10)
+}
+
+.col-11 {
+	@include grid-column(11)
+}
+
+.col-12 {
+	@include grid-column(12)
+}
+
+.list-unstyled {
+	list-style: none;
+	display: flex;
+	width: auto;
+	padding: 0;
+}
+
+.list-unstyled li {
+	padding: 0 5px;
+
+	a {
+		text-decoration: none;
+	}
+}
+
+.navbar {
+	display: flex;
+	width: 100%;
+}
+
+.header-fixed {
+	position: fixed;
+	left: 0;
+	right: 0;
+}
+
+.navbar-nav {
+	display: flex;
+}
+
+.btn {
+	border-width: 0;
+	letter-spacing: 2px;
+	min-width: 160px;
+	text-transform: uppercase;
+	white-space: normal;
+}
+
+.small {
+	font-size: 12px;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-white * {
+	color: white;
+}
