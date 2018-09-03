@@ -1,15 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
+	<link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+	<h1>Rock-Paper-Scissor Game!</h1>
+	<div class="container">
+		<div class="plays">
+			<span id="humanPlay">-</span>
+			<span>VS</span>
+			<span id="computerPlay">-</span>
+		</div>
+		<div class="scores">
+			<span>Human:</span>
+			<span id="human">0</span>
+			<span>Computer:</span>
+			<span id="computer">0</span><br>
+			<span id="scoreText"></span><br>
+			<span id="result"></span>
+		</div>
+		<div class="buttons">
+			<button type="button" value="scissor">Scissor</button>
+			<button type="button" value="paper">Paper</button>
+			<button type="button" value="rock">Rock</button>
+		</div>
+	</div>
 	<script>
-		let humanWins = 0
-		let computerWins = 0
+		const humanScore = document.querySelector('#human');
+		const computerScore = document.querySelector('#computer');
+		const humanChoice = document.querySelector('#humanPlay');
+		const computerChoice = document.querySelector('#computerPlay');
+		const scoreText = document.querySelector('#scoreText');
+		const finalResult = document.querySelector('#result');
+		let humanWins = 0;
+		let computerWins = 0;
 
 		function computerPlay() {
 			let number = Math.floor(Math.random() * 3);
-			let result = ""
+			let result = "";
 
 			if (number === 0) {
 				return result = "rock";
@@ -20,40 +49,58 @@
 			}
 		}
 
-		function playRound(playerSelection, computerSelection) {
-			let humanPlay = playerSelection.toLowerCase()
+		function playRound(humanSelection, computerSelection) {
+			humanChoice.textContent = humanSelection;
+			computerChoice.textContent = computerSelection;
 
-			if (humanPlay === computerSelection) {
-				return result = humanPlay + " vs " + computerSelection + ". It's a DRAW!"
-			} else if (humanPlay === "rock" && computerSelection === "scissor" ||
-				       humanPlay === "paper" && computerSelection === "rock" ||
-				       humanPlay === "scissor" && computerSelection === "paper") {
-				humanWins += 1
-				return result = humanPlay + " vs " + computerSelection + ". Player 1 WIN!"
+			if (humanSelection === computerSelection) {
+				scoreText.textContent =  "It's a DRAW!";
+			} else if (humanSelection === "rock" && computerSelection === "scissor" ||
+				       humanSelection === "paper" && computerSelection === "rock" ||
+				       humanSelection === "scissor" && computerSelection === "paper") {
+				humanWins += 1;
+				scoreText.textContent = "Player 1 WIN!";
+				humanScore.textContent = humanWins;
+		
 			} else {
-				computerWins += 1
-				return result = humanPlay + " vs " + computerSelection + ". The computer WIN!"
+				computerWins += 1;
+				scoreText.textContent = "The computer WIN!";
+				computerScore.textContent = computerWins;
+
 			}
+			console.log(gameResult());
 		}
 
-		function game() {
+		function game(playerPlay) {
 			for (i = 1; i < 6; i++) {
-				console.log(playRound(prompt("Enter your choice", "rock"), computerPlay()));
+				console.log(playRound(playerPlay, computerPlay()));
 			}
 			return gameResult();
 		}
 
 		function gameResult() {
-			if (humanWins > computerWins) {
-				return result = `Player 1: ${humanWins} vs Computer: ${computerWins}. Player 1 WON!!!`
-			} else if (humanWins < computerWins) {
-				return result = `Player 1: ${humanWins} vs Computer: ${computerWins}. Computer WON!!!`
-			} else {
-				return result = `Player 1: ${humanWins} vs Computer: ${computerWins}. DRAW! No one wins...`
+			if (humanWins === 3) {
+				finalResult.textContent = `Player 1 WON THE GAME!`;
+				resetGame();
+			} else if (computerWins === 3) {
+				finalResult.textContent = `Computer WON THE GAME!`;
+				resetGame();
 			}
 		}
 
-		console.log(game())
+		function resetGame() {
+			humanWins = 0;
+			computerWins = 0;
+			humanScore.textContent = 0;
+			computerScore.textContent = 0;
+		}
+
+		const buttons = document.querySelectorAll('button');
+	
+		buttons.forEach(button => button.addEventListener('click', function() {
+			playRound(button.value, computerPlay());
+
+	  }));
 
 	</script>
 </body>

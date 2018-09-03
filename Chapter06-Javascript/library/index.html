@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="assets/stylesheet/main.css">
+	<script async type="text/javascript" src="assets/javascript/main.js"></script>
+	<title>Javascript Exercise</title>
+</head>
+<body>
+	<section class="container">
+		<h1>Odin Project: Library</h1>
+		<table class="library">
+			<thead>
+				<tr>
+					<th id="head-title">Title</th>
+					<th id="head-author">Author</th>
+					<th id="head-pages">Pages</th>
+					<th id="head-read">Read</th>
+					<th id="head-delete">Delete</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+		<button id="add-btn" type="button">Add book</button>
+	</section>
+
+	<section class="new-book">
+		<form class="book-form">
+			<legend>Add a new book!</legend>
+			<fieldset id="box-input">
+				<label for="book-title">Title</label>
+				<input type="text" name="title" id="book-title">
+
+				<label for="book-author">Author</label>
+				<input type="text" name="author" id="book-author">
+
+				<label for="book-pages">Pages</label>
+				<input type="number" name="book-pages" id="book-pages">
+			</fieldset>
+			<fieldset id="radio-input">
+				<label for="book-read">Read</label>
+				<input type="radio" name="book-read" id="book-read" value="yes" checked> Yes
+				<input type="radio" name="book-read" id="book-read" value="no"> No
+			</fieldset>
+
+			<button type="button" name="submit-btn" id="submit-btn">Submit</button>
+
+		</form>
+	</section>
+</body>
+</html>

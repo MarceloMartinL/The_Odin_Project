@@ -1,0 +1,144 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+h1 {
+	text-align: center;
+	font-size: 35px;
+}
+
+.container {
+	margin: 20px auto 10px auto;
+	width: 1000px;
+}
+
+.library {
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px solid black;
+}
+
+.library th {
+	padding: 10px;
+}
+
+.library td {
+	border: 1px solid black;
+	padding: 10px;
+}
+
+.library thead tr {
+	background: linear-gradient(#2fbfde, #6dd7f3);
+}
+
+.library tbody td:nth-child(3),
+.library tbody td:nth-child(4) {
+	text-align: center;
+}
+
+.library tbody tr:nth-child(even) {
+  background: #f0f0f2;
+}
+
+.book-form {
+	width: 400px;
+	margin: 0 auto;
+	border: 1px solid #c7c7c7;
+}
+
+.book-form legend {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 20px;
+	background: #24cde9;
+	color: white;
+	font-weight: 700;
+	padding: 15px 0;
+}
+
+.book-form fieldset {
+	text-align: center;
+	border: none;
+	padding: 0;
+}
+
+.book-form button {
+	display: block;
+	margin: 20px auto;
+	background: #24cde9;
+	border: 1px solid #354144;
+	width: 200px;
+	height: 40px;
+	border-radius: 5%;
+	color: white;
+	font-size: 18px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.read-yes {
+	color: green;
+}
+
+.read-no {
+	color: red;
+}
+
+.new-book {
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+#box-input input {
+	width: 300px;
+	height: 30px;
+}
+
+#box-input label {
+	display: block;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	padding-top: 15px;
+	padding-bottom: 10px;
+}
+
+#add-btn {
+	width: 200px;
+	height: 40px;
+	background: #24cde9;
+	border: 1px solid #354144;
+	color: white;
+	font-size: 20px;
+	font-weight: 700;
+	border-radius: 5%;
+	margin: 30px auto;
+	display: block;
+	cursor: pointer;
+}
+
+#radio-input {
+	margin: 10px 0;
+}
+
+#head-title {
+	width: 40%;
+}
+
+#head-author {
+	width: 30%;
+}
+
+#head-pages {
+	width: 10%;
+}
+
+#head-read {
+	width: 10%;
+}
+
+#head-delete {
+	width: 10%;
+}
