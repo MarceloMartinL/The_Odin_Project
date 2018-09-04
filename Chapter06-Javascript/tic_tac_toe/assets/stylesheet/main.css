@@ -1,0 +1,98 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+}
+
+h1, h2 {
+	text-align: center;
+}
+
+.container {
+	position: relative;
+	width: 940px;
+	margin: 0 auto;
+}
+
+.container h2 {
+	font-size: 35px;
+}
+
+.gameboard {
+	width: 500px;
+	height: 500px;
+	border-collapse: collapse;
+	margin: 0 auto;
+}
+
+.gameboard td {
+	font-size: 100px;
+	text-align: center;
+	border: 1px solid black;
+	width: 33.3%;
+	height: 33.3%;
+	line-height: 0;
+	cursor: pointer;
+}
+
+.game-overlay {
+	width: 100%;
+	height: 100%;
+	background: rgba(21, 17, 15, 0.93);
+	position: fixed;
+	display: none;
+	z-index: 1;
+}
+
+.game-overlay button {
+	position: relative;
+	transform: translate(-50%);
+	left: 50%;
+	top: 300px;
+	width: 200px;
+	height: 60px;
+	border: 1px solid #ebf0f6;
+	border-radius: 5%;
+	font-size: 25px;
+	padding: 0;
+	background: transparent;
+	cursor: pointer;
+	font-weight: 700;
+	color: white;
+}
+
+.game-overlay button:hover {
+	background: rgba(255, 255, 255, 0.3);
+}
+
+.show {
+	display: block;
+}
+
+.game-buttons {
+	position: absolute;
+	top: 200px;
+	left: 50px;
+}
+
+.game-buttons button {
+	width: 100px;
+	height: 50px;
+	background: linear-gradient(#39d6e9, #1c8cde);
+	border: 1px solid black;
+	border-radius: 5%;
+	cursor: pointer;
+}
+
+
+#game-over {
+	font-size: 40px;
+	color: white;
+	position: relative;
+	top: 250px;
+}
