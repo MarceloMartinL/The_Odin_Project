@@ -9,6 +9,10 @@ html, body {
 	overflow: hidden;
 }
 
+body {
+	background: #ecd4a380;
+}
+
 h1, h2 {
 	text-align: center;
 }
@@ -17,6 +21,18 @@ h1, h2 {
 	position: relative;
 	width: 940px;
 	margin: 0 auto;
+}
+
+.container h1 {
+	margin: 60px 0;
+	color: #9b5225cc;
+	font-size: 50px;
+	text-transform: uppercase;
+	font-family: 'Anton', sans-serif;
+	letter-spacing: 3px;
+	-webkit-text-fill-color: #fba82c80;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: #6c1f1f;
 }
 
 .container h2 {
@@ -31,9 +47,11 @@ h1, h2 {
 }
 
 .gameboard td {
+	background-color: white;
+	color: #9b5225cc;
 	font-size: 100px;
 	text-align: center;
-	border: 1px solid black;
+	border: 2px solid #de8c31;
 	width: 33.3%;
 	height: 33.3%;
 	line-height: 0;
@@ -83,16 +101,39 @@ h1, h2 {
 .game-buttons button {
 	width: 100px;
 	height: 50px;
-	background: linear-gradient(#39d6e9, #1c8cde);
+	background: linear-gradient(#fff, #e1d54fe6);
 	border: 1px solid black;
 	border-radius: 5%;
 	cursor: pointer;
 }
 
+.info-box {
+	font-family: 'Roboto', sans-serif;
+	color: #9b5225cc;
+	background: white;
+	border-radius: 5%;
+	border: 4px solid;
+}
 
 #game-over {
 	font-size: 40px;
 	color: white;
 	position: relative;
 	top: 250px;
+}
+
+#active-player {
+	font-size: 40px;
+	text-transform: uppercase;
+	width: 400px;
+	margin: 35px auto;
+}
+
+#info-players {
+	position: absolute;
+	top: 150px;
+	left: 780px;
+	font-size: 20px;
+	width: 150px;
+	text-align: center;
 }
