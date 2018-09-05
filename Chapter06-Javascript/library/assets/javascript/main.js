@@ -31,11 +31,13 @@ function addBookToLibrary() {
 }
 
 // Creates a book object
-function createBook(title, author, pagesNum, read) {
-	this.title = title
-	this.author = author
-	this.pages = pagesNum
-	this.read = read		
+class createBook {
+	constructor(title, author, pagesNum, read) {
+		this.title = title
+		this.author = author
+		this.pages = pagesNum
+		this.read = read	
+	}
 }
 
 // Populates the library with default books
