@@ -80,7 +80,6 @@ const gameBoard = (() => {
 
 		resetButton.forEach(button => button.addEventListener('click', resetBoard));
 		overlayResetButton.addEventListener('click', function() {
-			console.log("resetttt")
 			gameOverlay.classList.toggle('show')
 		})
 	};
