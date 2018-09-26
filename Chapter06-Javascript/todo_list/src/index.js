@@ -31,7 +31,9 @@ createTaskBtn.addEventListener('click', function() {
 
 	todoLogic.addTask(todoDisplay.activeProject, task)
 	todoDisplay.renderProjectTasks(todoDisplay.activeProject)
+	setCompletedBtnEvent();
 	setDeleteBtnEvent();
+
 
 })
 
@@ -58,6 +60,7 @@ function setDeleteBtnEvent() {
 		button.addEventListener('click', function() {
 			todoLogic.deleteTask(project, taskIndex);
 			todoDisplay.renderProjectTasks(project);
+			setCompletedBtnEvent();
 		})
 	})
 }
