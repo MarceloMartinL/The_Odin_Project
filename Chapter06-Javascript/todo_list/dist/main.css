@@ -6,6 +6,14 @@ html, body {
 	height: 100%;
 }
 
+a {
+ cursor: pointer;
+}
+
+hr {
+	margin: 5px 0;
+}
+
 .main-header {
 	height: 70px;
 	background: #0f8be7;
@@ -13,27 +21,150 @@ html, body {
 
 .banner {
 	color: white;
+	overflow: auto;
 }
 
 .banner h1 {
 	text-align: center;
+	margin-top: 10px;
 }
 
-.side-bar hr {
-	margin: 5px 0;
-}
-
-.side-bar-header h2 {
+.side-bar-header h2,
+.content-header h2 {
 	margin-top: 20px;
 }
 
-.project-modal-btn {
+.content {
+	padding: 0 70px;
+}
+
+.side-bar {
+	max-width: 300px;
+}
+
+.add-modal-btn {
 	height: 40px;
 	position: relative;
 	top: 15px;
 	left: 40px;
 }
 
-.project-modal-btn:focus {
+.add-modal-btn:focus {
+	box-shadow: none;
+}
+
+.project-list li {
+	height: 30px;
+	text-transform: uppercase;
+	font-weight: bold;
+	background: #0f8be7;
+	color: white;
+	margin: 15px 0;
+	padding: 3px 10px;
+}
+
+.project-list li:hover {
+	background: #086cb6;
+	cursor: pointer;
+}
+
+.project-list li.active-project {
+	background: #086cb6;
+}
+
+.todo-card {
+	background: linear-gradient(#e0e0e0, #f3efef4d);
+	border: 1px solid #dbd6d6;
+	border-radius: 5px;
+}
+
+.todo-card-header {
+	color: black;
+	font-size: 18px;
+	margin-left: 20px;
+}
+
+.todo-card-info {
+	color: #114cf6;
+	font-size: 15px;
+	margin-left: 20px;
+}
+
+.todo-card-info p {
+	margin-left: 10px;
+	margin-bottom: 0;
+}
+
+.normal-priority {
+	color: #21bed1;;
+}
+
+.high-priority {
+	color: #f00;
+}
+
+.low-priority {
+	color: #139226;
+}
+
+.todo-card-description {
+	width: 500px;
+	font-size: 15px;
+	border: 1px solid #dbd6d6;
+	border-radius: 5px;
+}
+
+.todo-card-description p {
+	margin: 15px 0 15px 20px;
+}
+
+.task-list li {
+	display: flex;
+	flex-wrap: wrap;
+	width: 600px;
+	margin: 15px 0;
+}
+
+.task-list a {
+	display: block;
+	width: 400px;
+	outline: 0;
+}
+
+.task-list a:hover {
+	text-decoration: none;
+}
+
+.completed-btn {
+	margin-left: 15px;
+	font-size: 20px;
+	height: 40px;
+	position: relative;
+	top: 5px;
+}
+
+.delete-btn {
+	margin-left: 15px;
+	font-size: 20px;
+	height: 40px;
+	position: relative;
+	top: 5px;
+}
+
+.completed-task {
+	background: linear-gradient(#9fef7c, #51f3094d);
+}
+
+.uncomplete-task-btn {
+	background: #7a7a7a;
+	border-color: transparent;
+}
+
+.uncomplete-task-btn:hover {
+	background: #636060;
+	border-color: #636060;
+}
+
+.btn:focus {
 	box-shadow: none;
 }
