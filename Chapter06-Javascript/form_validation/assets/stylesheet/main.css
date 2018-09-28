@@ -1,0 +1,42 @@
+* {
+	box-sizing: border-box;
+}
+
+h1 {
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+form {
+	width: 300px;
+	margin: auto;
+}
+
+label {
+	display: block;
+	margin-top: 10px;
+}
+
+button {
+	display: block;
+	margin: 15px 0;
+}
+
+input {
+	height: 35px;
+}
+
+input:invalid {
+
+}
+
+.container {
+	margin: 50px 200px;
+}
+
+.error {
+	display: block;
+	padding: 8px 0;
+	color: red;
+	font-size: 14px;
+}
